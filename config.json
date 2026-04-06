@@ -1,0 +1,25 @@
+{
+  "dns_targets": [
+    "google.com",
+    "github.com",
+    "microsoft.com",
+    "aws.amazon.com",
+    "en.wikipedia.org",
+    "this-is-a-fake-domain-that-should-fail.local"
+  ],
+  "tcp_targets": [
+    { "host": "8.8.8.8", "port": 53 },
+    { "host": "1.1.1.1", "port": 53 },
+    { "host": "github.com", "port": 443 },
+    { "host": "wikipedia.org", "port": 80 },
+    { "host": "microsoft.com", "port": 443 },
+    { "host": "localhost", "port": 8080 }
+  ],
+  "http_targets": [
+    { "url": "https://www.google.com", "max_latency_ms": 300 },
+    { "url": "https://api.github.com", "max_latency_ms": 400 },
+    { "url": "https://en.wikipedia.org/wiki/Main_Page", "max_latency_ms": 350 },
+    { "url": "https://postman-echo.com/get", "max_latency_ms": 500 },
+    { "url": "http://localhost:8080/health", "max_latency_ms": 100 }
+  ]
+}
