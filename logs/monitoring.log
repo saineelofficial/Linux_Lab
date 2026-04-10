@@ -159,3 +159,58 @@
 [2026-04-09 20:32:00] [DIAG] [localhost] Diagnostics complete.
 [2026-04-09 20:32:00] [DIAG] [localhost] ======================================
 [2026-04-09 20:32:00] [INFO] [SYSTEM] Completed monitoring cycle
+[2026-04-09 20:36:23] [INFO] [SYSTEM] Starting monitoring cycle
+[2026-04-09 20:36:23] [INFO] [DNS] Resolved google.com to 142.251.211.174
+[2026-04-09 20:36:23] [INFO] [DNS] Resolved github.com to 140.82.113.4
+[2026-04-09 20:36:23] [INFO] [DNS] Resolved microsoft.com to 13.107.226.41
+[2026-04-09 20:36:23] [INFO] [DNS] Resolved aws.amazon.com to 13.33.67.120
+[2026-04-09 20:36:23] [INFO] [DNS] Resolved en.wikipedia.org to 208.80.154.224
+[2026-04-09 20:36:28] [ERROR] [DNS] Failed to resolve this-is-a-fake-domain-that-should-fail.local: [Errno 8] nodename nor servname provided, or not known
+[2026-04-09 20:36:28] [INFO] [DIAGNOSTICS] Triggering network_diagnostics.sh for this-is-a-fake-domain-that-should-fail.local
+[2026-04-09 20:36:44] [ERROR] [DIAGNOSTICS] Failed to run diagnostic script: Command '['/Users/saineel/Documents/GitHub/Linux_Lab/network_diagnostics.sh', 'this-is-a-fake-domain-that-should-fail.local']' timed out after 15 seconds
+[2026-04-09 20:36:44] [INFO] [TCP] Successfully connected to 8.8.8.8:53
+[2026-04-09 20:36:44] [INFO] [TCP] Successfully connected to 1.1.1.1:53
+[2026-04-09 20:36:44] [INFO] [TCP] Successfully connected to github.com:443
+[2026-04-09 20:36:44] [INFO] [TCP] Successfully connected to wikipedia.org:80
+[2026-04-09 20:36:44] [INFO] [TCP] Successfully connected to microsoft.com:443
+[2026-04-09 20:36:44] [ERROR] [TCP] Connection to localhost:8080 was refused.
+[2026-04-09 20:36:44] [INFO] [DIAGNOSTICS] Triggering network_diagnostics.sh for localhost
+[2026-04-09 20:36:47] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:47] [DIAG] [localhost] Diagnostics for: localhost
+[2026-04-09 20:36:47] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:47] [DIAG] [localhost] [1] PING Check
+[2026-04-09 20:36:47] [DIAG] [localhost] SUCCESS: Host is reachable via ICMP (ping).
+[2026-04-09 20:36:47] [DIAG] [localhost] [2] DNS Resolution Check (nslookup / dig)
+[2026-04-09 20:36:47] [DIAG] [localhost] [3] Common Port Check (SSH: 22, HTTP: 80, HTTPS: 443) using netcat
+[2026-04-09 20:36:47] [DIAG] [localhost] FAILURE: Port 22 is CLOSED or timed out.
+[2026-04-09 20:36:47] [DIAG] [localhost] FAILURE: Port 80 is CLOSED or timed out.
+[2026-04-09 20:36:47] [DIAG] [localhost] FAILURE: Port 443 is CLOSED or timed out.
+[2026-04-09 20:36:47] [DIAG] [localhost] [4] HTTP Response Headers Check (if applicable)
+[2026-04-09 20:36:47] [DIAG] [localhost] HTTP: No response or connection failed.
+[2026-04-09 20:36:47] [DIAG] [localhost] HTTPS: No response or connection failed.
+[2026-04-09 20:36:47] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:47] [DIAG] [localhost] Diagnostics complete.
+[2026-04-09 20:36:47] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:47] [INFO] [HTTP] Service OK: https://www.google.com reached in 82ms
+[2026-04-09 20:36:47] [INFO] [HTTP] Service OK: https://api.github.com reached in 65ms
+[2026-04-09 20:36:47] [INFO] [HTTP] Service OK: https://en.wikipedia.org/wiki/Main_Page reached in 42ms
+[2026-04-09 20:36:47] [INFO] [HTTP] Service OK: https://postman-echo.com/get reached in 74ms
+[2026-04-09 20:36:47] [ERROR] [HTTP] URL Error for http://localhost:8080/health: [Errno 61] Connection refused
+[2026-04-09 20:36:47] [INFO] [DIAGNOSTICS] Triggering network_diagnostics.sh for localhost
+[2026-04-09 20:36:50] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:50] [DIAG] [localhost] Diagnostics for: localhost
+[2026-04-09 20:36:50] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:50] [DIAG] [localhost] [1] PING Check
+[2026-04-09 20:36:50] [DIAG] [localhost] SUCCESS: Host is reachable via ICMP (ping).
+[2026-04-09 20:36:50] [DIAG] [localhost] [2] DNS Resolution Check (nslookup / dig)
+[2026-04-09 20:36:50] [DIAG] [localhost] [3] Common Port Check (SSH: 22, HTTP: 80, HTTPS: 443) using netcat
+[2026-04-09 20:36:50] [DIAG] [localhost] FAILURE: Port 22 is CLOSED or timed out.
+[2026-04-09 20:36:50] [DIAG] [localhost] FAILURE: Port 80 is CLOSED or timed out.
+[2026-04-09 20:36:50] [DIAG] [localhost] FAILURE: Port 443 is CLOSED or timed out.
+[2026-04-09 20:36:50] [DIAG] [localhost] [4] HTTP Response Headers Check (if applicable)
+[2026-04-09 20:36:50] [DIAG] [localhost] HTTP: No response or connection failed.
+[2026-04-09 20:36:50] [DIAG] [localhost] HTTPS: No response or connection failed.
+[2026-04-09 20:36:50] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:50] [DIAG] [localhost] Diagnostics complete.
+[2026-04-09 20:36:50] [DIAG] [localhost] ======================================
+[2026-04-09 20:36:50] [INFO] [SYSTEM] Completed monitoring cycle
