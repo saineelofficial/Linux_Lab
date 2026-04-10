@@ -1,2 +1,2 @@
-./logs/monitoring.log
-./logs/cron.log
+logs/monitoring.log
+logs/cron.log
